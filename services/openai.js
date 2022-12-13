@@ -8,14 +8,14 @@ import {
   OPENAI_COMPLETION_PRESENCE_PENALTY,
 } from '../config/index.js';
 
-export const PARTICIPANT_AI = 'AI';
-export const PARTICIPANT_HUMAN = 'Human';
+export const PARTICIPANT_AI = 'A';
+export const PARTICIPANT_HUMAN = 'Q';
 export const FINISH_REASON_STOP = 'stop';
 export const FINISH_REASON_LENGTH = 'length';
 
 const instance = axios.create({
   baseURL: 'https://api.openai.com',
-  timeout: 60 * 1000,
+  timeout: 9 * 1000,
   headers: {
     Authorization: `Bearer ${OPENAI_API_KEY}`,
   },
